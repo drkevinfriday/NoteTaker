@@ -21,7 +21,7 @@ router.post('/notes', (req, res) => {
     const note = req.body
     noteList.push(note)
 
-    console.log('notelist' + noteList.toString())
+   console.log('notelist' + noteList.toString())
    console.log(note)
 
     
@@ -32,10 +32,10 @@ router.post('/notes', (req, res) => {
       )
       res.json(note)
     })
-// router.delete('/notes/:id',(req,res) =>{
-//     const params = req.body.id
-//     this.delete.params
-// })
+router.delete('/notes/:id',(req,res) =>{
+    const params = req.body.id
+    this.delete.params
+})
     
 module.exports = router
 
