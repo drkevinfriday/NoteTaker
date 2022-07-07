@@ -1,2 +1,1 @@
-# NoteTaker
-11. Express note Taker Challenge
+# Note Taker Starter Code
