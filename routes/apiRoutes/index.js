@@ -3,7 +3,7 @@ const res = require('express/lib/response');
 const fs = require("fs");
 const path = require('path');
 const uniqueID = require('uniqid')
-const  noteList = require('../../db/db.json')
+const noteList = require('../../db/db.json')
 
 
 
@@ -33,8 +33,17 @@ router.post('/notes', (req, res) => {
       res.json(note)
     })
 router.delete('/notes/:id',(req,res) =>{
-    const params = req.body.id
-    this.delete.params
+    const noteid = req.params.id
+
+    console.log(noteid)
+    
+    for(let i = 0; i < noteList.length; i++){
+        if(noteList[i].id === noteid){
+            noteList.splice(i,1)
+        }
+    
+    }
+    res.json(noteList)
 })
     
 module.exports = router
